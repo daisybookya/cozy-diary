@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+.title-sp{
+    font-family: 'Kaisei Decol', serif;
+}
+.title-sp-cozy{
+    font-family: 'Mulish', sans-serif;;
+}
+/*theme: simple*/
+$mainBg: #eae9e9;
+$subBg: #fff;
+$mainTxt: #000;
+$subTxt:rgb(46, 46, 46);
+$lineColor:#D5D4D4;
+/*theme: nude*/
+$mainBgN: #d0c5be;
+$subBgN: #fff7f3;
+$mainTxtN: #493b30;
+$subTxtN:#645549;
+$lineColorN:#493b30;
+$linkHoverN:#9f8d80;
+
+//margin&padding
+$outPadding:1%;
+
+//link
+$linkColor:#555;
+$linkHover:rgb(122, 122, 122);
+$btnBg:#000;
+$btnHover:#555;
+$btnTxt:#fff;
+/*nude*/
+$linkColorN:#493b30;
+$linkHoverN:#e8e2de;
+$btnBgN:#553722;
+$btnHoverN:#9f8d80;
+$btnTxtN:#fff;
+
+//font size
+$logoSize:32px;
+$dateSize:80px;
+$dateSubSize:40px;
+$titleSize:36px;
+$txtTitleSize:18px;
+$txtSize:16px;
+$noteSize:14px;
+
+$iconColor:#D5D4D4;
+$iconColor2:#9CB8FF;
+$iconColor3:#99EB7C;
+/*nude*/
+$iconColorN:#ae9c8f;
+$iconColorN2:#628ead;
+
+//media query
+$xsSize:1px;
+$sSize:576px;
+$mSize:768px;
+$lSize:1000px;
+$xlSize:1200px;

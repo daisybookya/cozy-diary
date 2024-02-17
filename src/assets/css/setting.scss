@@ -1,0 +1,106 @@
+@import 'theme';
+.setting{
+    button{
+        margin: 0 10px;
+        cursor: pointer;
+    }
+}
+.sample{
+    ul{
+        li{
+            list-style: circle;
+            list-style-position: inside;
+        }
+
+    }
+}
+.sample-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    figure{
+        margin: 10px 20px;
+    }
+}
+.nude{
+    .btn-group{
+        .btn-g-b{
+            border: 1px solid $mainTxtN;
+            &.checked{
+                background-color: $mainBgN;
+            }
+        }
+    }
+}
+.simple{
+    .btn-group{
+        .btn-g-b{
+            border: 1px solid $mainTxt;
+            &.checked{
+                color: #fff;
+                background-color: $linkHover;
+            }
+        }
+    }
+}
+.btn-group{
+    display: inline-block;
+    .btn-g-b{
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: $noteSize;
+        cursor: pointer;
+
+        &:nth-child(odd){
+            border-right: none;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        &:nth-child(even){
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+h1{
+    margin: 20px 0;
+    font-size: 24px;
+}
+.part{
+    margin: 15px 0;
+    padding: 20px;
+    border-bottom: 1px solid $lineColor;
+    &:last-child{
+        border-bottom: none;
+    }
+    .point{
+        font-size: $txtTitleSize;
+        font-weight: bold;
+        button{
+            float: right;
+        }
+    }
+    ul{
+        padding: 10px 0;
+        li{
+            button{
+                display: inline-block;
+            }
+            margin: 15px 0;
+        }
+    }
+}
+.nude{
+    .part{
+        border-bottom: 1px solid #fff;
+    }
+}
+@media (min-width: $lSize) {
+    .sample-box{
+        flex-direction: row;
+        figure{
+            margin: 20px;
+            margin-top: 10px;
+        }
+    }
+}

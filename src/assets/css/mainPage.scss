@@ -1,0 +1,157 @@
+@import 'theme';
+.page-nav{
+    width: 100%;
+    position: relative;
+}
+.on-date{
+    @extend .title-sp;
+    font-size: 60px;
+    span{
+        font-size: 30px;
+    }
+}
+.type-title{
+    font-size: $txtTitleSize;
+    margin: 20px 0;
+}
+select,[type="text"],textarea{
+    border: 1px solid $lineColor;
+}
+.daily-nav{
+    position: absolute;
+    right: 1%;
+    top: 25px;
+    z-index: 5;
+    button{
+        cursor: pointer;
+        margin: 0 5px;
+        display: inline-block;
+    }
+}
+.notice{
+    li{
+        margin: 15px 0;
+        list-style: disc;
+        list-style-position: inside;
+        font-size: $txtSize;
+        font-weight: bold;
+    }
+}
+.box-select{
+    position: relative;
+    &:after{
+        content: '';
+        pointer-events: none;
+        width: 0;
+        height: 0;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-25%);
+        border: 7px solid transparent;
+        border-top:7px solid #fff ;
+    }
+}
+select{
+    padding: 8px 20px;
+    font-size: $txtSize;
+    width: 100%;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+textarea{
+    width: 100%;
+    &:focus{
+        border: 1px solid $subTxt;
+    }
+}
+form{
+    .thks-item{
+        margin-bottom: 20px;
+        p{
+            margin: 10px 0;
+        }
+    }
+    p{
+        margin: 20px 0;
+        
+    }
+}
+input[type="text"]{
+    padding: 5px;
+    margin: 10px 0;
+    width: 100%;
+    &:focus{
+        border: 1px solid $subTxt;
+    }
+}
+.welcome{
+    p{
+        padding: 5px 0;
+        
+    }
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 55;
+    background: rgba(0,0,0,0.7);
+    &.open{
+        display: block;
+    }
+}
+.modal{
+    padding: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    z-index: 56;
+    background: $mainBg;
+    color: $mainTxt;
+    font-size: $txtTitleSize;
+    p{
+        margin: 20px 0;
+        text-align: center;
+    }
+    button{
+        margin: 0 10px;
+        cursor: pointer;
+    }
+}
+.nude{
+    .on-date{
+        @extend .title-sp-cozy;
+    }
+    .modal,select{
+        background: $mainBgN;
+        color: $mainTxtN;
+    }
+    select,[type="text"],textarea{
+        border: 1px solid $mainBgN;
+    }
+}
+@media (min-width: $lSize) {
+    .on-date{
+        font-size: $dateSize;
+        span{
+            font-size: $dateSubSize;
+        }
+    }
+    .welcome{
+        height: 100%;
+    }
+    .type-title{
+        font-size: 24px;
+    }
+}

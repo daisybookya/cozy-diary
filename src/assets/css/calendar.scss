@@ -1,0 +1,143 @@
+@import 'theme';
+.calendar{
+    width: 100%;
+    table{
+        width: 100%;
+        th{
+            width: calc(100%/7);
+            padding: 10px 0;
+            border-right: 1px solid $lineColor;
+            text-align: center;
+            border-top: 1px solid $lineColor;
+            border-bottom: 1px solid $lineColor;
+            &:last-child{
+                border-right: none;
+            }
+        }
+        td{
+            height: 10vh;
+        }
+        .cframe{
+            padding: 5%;
+            width: 100%;
+            height:100%;
+            float: left;
+            display: block;
+            border-radius: 5px;
+            &.dateNum{
+                cursor: pointer;
+                &:hover{
+                    background-color: $mainBg;
+                    color: $mainTxt;
+                }
+            }
+            &.mark{
+                background-color: $mainBg;
+            }
+            &.click{
+                background-color: $linkColor;
+                color: #fff;
+            }
+        }
+    }
+}
+.mark-list{
+display: block;
+    span{
+        display: none;
+        width: 15px;
+        height: 15px;
+        margin: 3px 10px;
+        border-radius: 15px;
+        &.diary{
+            background-color: $iconColor;
+        }
+        &.thks{
+            background-color: $iconColor2;
+        }
+        &.show{
+            display: inline-block;
+        }
+    }
+}
+.cal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .title{
+        font-size: 60px;
+        span{
+            margin-left: 5px;
+            font-size: 30px;
+        }
+    }
+}
+.ar-left,.ar-right{
+    cursor: pointer;
+}
+.layout{
+    &.simple{
+        color: $mainTxt;
+        .title,.calendar{
+            font-family: 'Kaisei Decol', serif;
+        }
+        
+    }
+}
+.nude{
+    .calendar{
+        table{
+            th{
+                border-right: 1px solid $lineColorN;
+                border-top: 1px solid $lineColorN;
+                border-bottom: 1px solid $lineColorN;
+                &:last-child{
+                    border-right: none;
+                }
+            }
+            .cframe{
+
+                &.dateNum{
+                    &:hover{
+                        background-color: $mainBgN;
+                        color: $mainTxtN;
+                    }
+                }
+                &.mark{
+                    background-color: $mainBgN;
+                }
+                &.click{
+                    background-color: $btnBgN;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .mark-list{
+            span{
+                &.diary{
+                    background-color: $iconColorN;
+                }
+                &.thks{
+                    background-color: $iconColorN2;
+                }
+            }
+        }
+}
+@media (min-width: $lSize) {
+    .cal-header{
+        .title{
+            font-size: $dateSize;
+            span{
+                font-size: $dateSubSize;
+            }
+        }
+    }
+    .calendar{
+        table{
+            td{
+                height: 100px;
+            }
+        }
+    }
+}

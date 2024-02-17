@@ -1,0 +1,249 @@
+@import 'theme';
+a{
+    text-decoration: none;
+    color: $linkColor;
+    &:hover{
+        color: $linkHover;
+        text-decoration: underline;
+    }
+}
+button{
+    display: inline-block;
+    padding: 7px 15px;
+    background-color: $btnBg;
+    font-size: $noteSize;
+    color: $btnTxt;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: $btnHover;
+    }
+    &.on{
+        background-color: $btnHover;
+    }
+}
+.btn-list{
+    button{
+        margin: 0 10px;
+    }
+}
+.note{
+    margin-left: 15px;
+    display: none;
+    font-size: $noteSize;
+    color: rgb(227, 58, 58);
+    &.show{
+        display: inline-block;
+    }
+}
+.layout{
+    overflow: auto;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    font-family: 'Noto Sans TC', sans-serif;
+    &.simple{
+        background-color: $mainBg;
+        header{
+            background-color: $mainBg;
+            .head{
+                span{
+                    @extend .title-sp;
+                }
+            }
+        }
+        .logo{
+            a{
+                @extend .title-sp;
+                color: $mainTxt;
+                &:hover{
+                    color: $linkHover;
+                }
+            }
+        }
+        .container{
+            background-color: $mainBg;
+        }
+        .main-container,.main,.sub-container{
+            background-color: $subBg;
+        }
+        
+    }
+    &.nude{
+        color: $mainTxtN;
+        background-color: $mainBgN;
+        button{
+            background-color: $btnBgN;
+            color: $btnTxtN;
+            &:hover{
+                background-color: $btnHoverN;
+            }
+            &.on{
+                background-color: $btnHoverN;
+            }
+        }
+        a{
+            color: $linkColorN;
+            &:hover{
+                color: $linkHoverN;
+            }
+        }
+        header{
+            background-color: $mainBgN;
+            .head{
+                span{
+                    @extend .title-sp-cozy;
+                }
+                
+            }
+        }
+        .logo{
+            a{
+                @extend .title-sp-cozy;
+                color: $mainTxtN;
+                &:hover{
+                    color: $linkHoverN;
+                }
+            }
+        }
+        .container{
+            background-color: $mainBgN;
+        }
+        .main-container,.main,.sub-container{
+            background-color: $subBgN;
+        }
+    }
+    
+}
+footer{
+    padding-bottom: $outPadding;
+    text-align: center;
+    font-size: $noteSize;
+}
+header{
+    padding: $outPadding 3%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        a{
+            font-size: 28px;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        
+    }
+    
+    ul{
+        margin: 0;
+        li{
+            margin: 0 5px;
+            display: inline-block;
+        }
+    }
+}
+.same-padding{
+    padding: $outPadding 3%;
+}
+.container{
+    @extend .same-padding;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.main-container{
+    @extend .same-padding;
+    
+    border-bottom-left-radius: unset;
+}
+.sub-container{
+    @extend .same-padding;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.main{
+    position: relative;
+    @extend .same-padding;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.page{
+    width: 100%;
+}
+.head{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    span{
+        font-size: $txtTitleSize;
+    }
+    ul.daily-list{
+        li{
+            margin: 0 15px;
+            display: inline-block;
+            font-size: $noteSize;
+            &:first-child{
+                b{
+                    color: $iconColor;
+                }
+            }
+            &:nth-child(2){
+                b{
+                    color: $iconColor2;
+                }
+            }
+            b{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+.nude{
+    ul.daily-list{
+        li{
+            margin: 0 15px;
+            display: inline-block;
+            font-size: $noteSize;
+            &:first-child{
+                b{
+                    color: $iconColorN;
+                }
+            }
+            &:nth-child(2){
+                b{
+                    color: $iconColorN2;
+                }
+            }
+        }
+    }
+}
+@media (min-width: $lSize) {
+
+    header{
+        padding: $outPadding;
+        .logo{
+            a{
+                font-size: $logoSize;
+            }
+        }
+    }
+    .container{
+        padding: $outPadding;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main-container{
+        width: 50%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: unset;
+    }
+    .main{
+        width: 50%;
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius:20px;
+    }
+}

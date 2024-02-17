@@ -1,0 +1,67 @@
+@import 'theme';
+
+.btn-close{
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    &.open{
+        display: block;
+    }
+}
+figure{
+    position: relative;
+    margin: 20px 0px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: $mainBg;
+    color: $mainTxt;
+    figcaption{
+        font-weight: bold;
+        line-height: $logoSize;
+        font-size: $txtTitleSize;
+    }
+    p{
+        //padding-top: 10px;
+        font-size: $noteSize;
+        line-height: $logoSize;
+    }
+}
+article{
+    @extend figure;
+    padding: 5px 15px;
+    section{
+        margin:10px 0;
+        border-bottom: 1px solid #fff;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    p{
+        
+        font-size: $txtTitleSize;
+        &.descript{
+            line-height: $titleSize;
+            font-size: $txtSize;
+        }
+        &.content{
+            margin-bottom: 20px;
+        }
+    }
+}
+.nude{
+    figure{
+        background-color: #f6e8e0;
+        color: $mainTxtN;
+    }
+}
+@media (min-width: $lSize) {
+
+}

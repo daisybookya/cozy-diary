@@ -7,7 +7,7 @@ import { useEffect } from "react";
 export default function MainLayout() {
   const Navigate = useNavigate();
   useEffect(() => {
-    if (location.pathname === "/") {
+    if (location.pathname === "/cozy-diary/") {
       Navigate("/home");
     }
   }, [Navigate]);
